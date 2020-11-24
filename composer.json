@@ -1,0 +1,40 @@
+{
+    "name": "docty/demos",
+    "description": ":Ready to use financial accounting guide",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "docty",
+            "email": "createdarko@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/docty/demos",
+    "keywords": ["Laravel", "Demos"],
+    "require": { 
+        "php": "^7.2"
+        
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Docty\\Demos\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Docty\\Demos\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Docty\\Demos\\DemosServiceProvider"
+            ],
+            "aliases": {
+                "Demos": "Docty\\Demos\\Facades\\Demos"
+            }
+        }
+    }
+}
