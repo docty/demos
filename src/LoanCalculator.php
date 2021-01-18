@@ -6,6 +6,9 @@ use Carbon\Carbon;
 use App\PaymentSchedule;
 use App\IncomeManagement;
 Use App\Customer;
+use App\BankManagement;
+use App\Pettycash;
+use App\Expense;
 
 class LoanCalculator
 {
@@ -409,7 +412,7 @@ class LoanCalculator
     {
         $today =  Carbon::now()->format('m/d/Y');
         $loanOutstandingDue = [];
-        foreach ($loanbook as $key=>$item){
+        foreach ($this->loan as $key=>$item){
             if ($nextPaymentDue[$key] == $today)
                 $loanOutstandingDue[] =  $totalAmountRemains[$key];
             else
